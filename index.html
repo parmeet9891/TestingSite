@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+  <body>
+    <section class="header" id="header">
+
+        <div class="bg-video">
+            <video class="bg-video__content" autoplay muted loop/>
+                <source src="./resources/Party_Popper.mp4" type="video/mp4">
+                    Your browser does not support playing video
+            </video>
+        </div>
+
+      <div class="header-box">
+        <span class="header-box__primary">HAPPY BIRTHDAY</span>
+        <span class="header-box__secondary">Harleen</span>
+
+        <a href="#popup" class="btn">Click Here</a>
+      </div>
+    </section>
+
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <div class="popup__left">
+          <img id="popup__image" src="https://images.unsplash.com/photo-1543886151-3bc2b944c718?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="Teddy Bear">
+        </div>
+
+        <div class="popup__right">
+          <a href="#header" class="popup__close">&times;</a>
+          <h2 id = "popup__h2">Hello Tedu, How are you?</h2>
+          <button class="content" id="content" onclick="contentChange()">Press Me!</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript"> 
+        let i = 0;
+        let totalLength = 7;
+        let contentJson = [
+            {
+                'image': 'https://images.unsplash.com/photo-1527867934269-909c7c06be8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=658&q=80',
+                'text': 'I Hope you would have a good day!'
+            },
+            {
+                'image' : 'https://images.unsplash.com/photo-1578922864601-79dcc7cbcea9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+                'text': 'Its your birthday today😍. See! I remember.'
+            },
+            {
+                'image': 'https://www.factstoday.in/wp-content/uploads/2018/01/india2canada.jpg',
+                'text': 'We are countries apart, But I know we are together. 😘',
+            },
+            {
+                'image': 'https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+                'text': 'I am always in a confused state that how someone could like me, understand me this much.'
+            },
+            {
+                'image': 'https://images.unsplash.com/photo-1569684728252-7f1d975b8ffd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+                'text': 'You have already did so much for me, and we have to go a very long way yet.'
+            },
+            {
+                'image': 'https://images.unsplash.com/photo-1496523720220-b62e33cf3161?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80',
+                'text': 'Happiest Birthday Haru! May god even take my happiness and put it in yours.'
+            },
+            {
+                'image': 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80',
+                'text': 'This is a small gift from me to you. This might not be the something you want but keep it. Love you ❤'
+            },
+        ]
+        function contentChange() {
+            let popupImage = document.getElementById('popup__image');
+            let contentText = document.getElementById('popup__h2');
+            let button = document.getElementById('content');
+
+            if(i >= totalLength) {
+                button.disabled = true;
+                button.textContent = 'THE END!';
+            }
+            else {
+                popupImage.src = contentJson[i].image;
+                contentText.innerText = contentJson[i].text;
+            }
+
+            i = i + 1;
+        }
+    </script>
+
+  </body>
+</html>
