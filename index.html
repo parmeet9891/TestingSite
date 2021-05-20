@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Surprise Bday Wish by parmeet9891</title>
+    <title>Static Template</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="./style.css" />
   </head>
@@ -19,8 +19,8 @@
         </div>
 
       <div class="header-box">
-        <span class="header-box__primary">HAPPY BIRTHDAY</span>
-        <span class="header-box__secondary">Manpreet</span>
+        <span class="header-box__primary">GOOD BYE</span>
+        <span class="header-box__secondary">NAKUL</span>
 
         <a href="#popup" class="btn">Click Here</a>
       </div>
@@ -29,66 +29,144 @@
     <div class="popup" id="popup">
       <div class="popup__content">
         <div class="popup__left">
-          <img id="popup__image" src="https://images.unsplash.com/photo-1543886151-3bc2b944c718?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="Teddy Bear">
+          <img id="popup__image" class="popup__image" src="./resources/img/Chethan.png" alt="Images of people who wishes Nakul a sweet good bye">
         </div>
 
         <div class="popup__right">
           <a href="#header" class="popup__close">&times;</a>
-          <h2 id = "popup__h2">Hello Manu, How are you?</h2>
+          <p class="msg-from">Message From - Chethan</p>
+          <h2 id = "popup__h2">All the best for your future endeavors.
+          </h2>
           <button class="content" id="content" onclick="contentChange()">Press Me!</button>
         </div>
       </div>
     </div>
 
-    <script type="text/javascript">
+    <script type="text/javascript"> 
+
         let i = 0;
-        let totalLength = 7;
         let contentJson = [
             {
-                'image': 'https://images.unsplash.com/photo-1527867934269-909c7c06be8e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=658&q=80',
-                'text': 'I Hope you would have a good day!'
+                'image': './resources/img/Manasi.png',
+                'text': 'Nakul bro, it is sad that you are leaving this organization but at the same time super happy that you would get more opportunities to explore, learn and prove your capabilities. You are a quick learner and made a good team player too. Super reliable and fun to work with! Outside of the office you were a different personality - cheerful, playful, awesome timing with your jokes....yaad rahenge wo din!! All the best bro and I am sure you will nail it! I so wish we could all meet and give you a nice farewell; hope to have a get-together soon. Stay in touch :)',
+                'author': 'Manasi Panchal'
             },
             {
-                'image' : 'https://images.unsplash.com/photo-1578922864601-79dcc7cbcea9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
-                'text': 'Its your birthday today😍. See! I remember.'
-            },
-           /* {
-                'image': 'https://www.factstoday.in/wp-content/uploads/2018/01/india2canada.jpg',
-                'text': 'We are countries apart, But I know we are together. 😘',
-            },*/
-            {
-                'image': 'https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
-                'text': 'Cant say much, you know, I m not a creative guy, But I found a brother.'
+                'image': './resources/img/Garima.png',
+                'text': 'You have been an excellent team member to work with. Wish you a wonderful luck in all your future endeavours. :)',
+                'author': 'Garima Agarwal'
             },
             {
-                'image': 'https://images.unsplash.com/photo-1569684728252-7f1d975b8ffd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
-                'text': 'You have already did so much for me, and we have to go a very long way yet.'
+                'image' : './resources/img/Manjari.png',
+                'text': `Farewell Nakul! Hope you achieve new heights and great things in all your future endeavours. I've learned a lot from working with you over this past year and hoping will get the chance to work together again soon. Best of luck for the never-ending adventures. See you soon!`,
+                'author': 'Manjari'
             },
             {
-                'image': 'https://images.unsplash.com/photo-1496523720220-b62e33cf3161?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80',
-                'text': 'Happiest Birthday Manu! May god even take my happiness and put it in yours.'
+                'image': './resources/img/Shadiyah.png',
+                'text': `"Nakul, you're the anti anxiety pill of MDM. You sail smoothly through your work and always put your best foot forward. Time seem to have flown by working alongside you. Although our journey in Alexion was short lived we will always be in touch and keep ""Skribble"" alive :D I'm glad you are getting what you deserve and hope you always do. P.S : We are yet to party in Mumbai so come soon ;)"`,
+                'author' : 'Shadiyah'
             },
             {
-                'image': 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80',
-                'text': 'This is a small gift from me to you. This might not be the something you want but keep it.'
+                'image': './resources/img/Parmeet.jpg',
+                'text': `Good Bye Nakul. Your dedication towards your topics is immense. You will have a good time ahead. I hope we will meet someday for all of your parties :P.`,
+                'author': 'Parmeet'
+            },
+            {
+                'image': './resources/img/Omkar.png',
+                'text': `Epic Humour & Great comic timing. Don't loose the positive spirit!!!`,
+                'author': 'Omkar Kale'
+            },
+            {
+                'image': './resources/img/Ani.png',
+                'text': `Dude you are gem and true warrior, you will be a champ and succeed wherever you go. Best luck and many more success ahead`,
+                'author': 'Ani'
+            },
+            {
+                'image': './resources/img/Abhishek.png',
+                'text': 'All the best for future Nakul',
+                'author': 'Abhishek Kanth',
+
+            },
+            {
+                'image': './resources/img/Ashu.png',
+                'text': `Thank you for the support and contribution you’ve shown over the years to the team. These memories are ones that I’ll never forget. Looking forward to stay in touch with you moving forward. Farewell, Nakul!`,
+                'author': 'Ashu Goyal',
+
+            },
+            {
+                'image': './resources/img/Arul.png',
+                'text': `Hi Nakul, Wish you all the best for your future endeavours.`,
+                'author': 'Thanigaiarul',
+            },
+            {
+                'image': './resources/img/Chaitra.png',
+                'text': `My heartiest good wishes to you and all the best man for your new career !!! Keep rocking!!! 😊`,
+                'author': 'Chaitra Swamy',
+            },
+            {
+                'image': './resources/img/Sid.png',
+                'text': `Although we have not worked together much, every interaction we have had you have left an imprint with your sarcasm :D :D .. Keep smiling and wish you the best for your future... :)`,
+                'author': 'Sid',
+            },
+            {
+                'image': './resources/img/Pooja.png',
+                'text': `Hey Nakul,
+
+                         I know that you are going to get an awesome salary in your new job but there is no guarantee that you will get awesome colleagues like us too. We will definitely miss your humorous jokes. Wishing you best in the next phase of your career. Hope we meet again.
+                         
+                         Until then, Keep rocking and keep sharing memes.`,
+                'author': 'Pooja Patil',
+            },
+            {
+                'image': './resources/img/Jigar.png',
+                'text': `One of the best Bantai in MDM Team. Always ready to help. No matter where you work, you will always be my friend.Good luck in your next adventure.`,
+                'author': 'Jigar',
+            },
+            {
+                'image': './resources/img/Jubin.png',
+                'text': `Hey Nakul,
+
+                         You have always been a good and encouraging friend since the day we joined Accenture, all the time we spent together has been crazy, I will truly miss your company and I mean it when I say "This a void which can never be filled.
+
+                         Wish you the very Best for all future endeavour! See you soon in Paradise!!`,
+                'author': 'Jubin',
+            },
+            {
+                'image': 'https://images.unsplash.com/photo-1602734846297-9299fc2d4703?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=676&q=80',
+                'text': `Hi Nakul,
+                         It was really great working with you here in MDM, I will really miss all the jokes you used to crack in between the KT's and the tasks. You were really a fun colleague and I enjoyed learning and working with you. Thanks for making the work environment so cool and for the all the guidance you gave... We will all miss you here at MDM!! I hope you really like your new workplace a lot and enjoy being there too and make great friends there too :) :)!!! Achieve all your dreams and have a great, successful, happy and adventurous life ahead :) :)!!! And stay in touch!! Best wishes to you!!`,
+                'author': 'Shreya Gupta',
+            },
+            {
+                'image': 'https://images.unsplash.com/photo-1602734846297-9299fc2d4703?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=676&q=80',
+                'text': `It has been great working with you. All the best for your bright Future.`,
+                'author': 'Priyanka Akula',
+            },
+            {
+                'image': 'https://images.unsplash.com/photo-1602734846297-9299fc2d4703?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=676&q=80',
+                'text': `It is great working with you and you have good potential on learning the things very quickly, keep learning and continue to grow greater heights in your career. All the best for your future assignment and endeavors.`,
+                'author': 'Rizvaana',
             },
         ]
         function contentChange() {
             let popupImage = document.getElementById('popup__image');
             let contentText = document.getElementById('popup__h2');
             let button = document.getElementById('content');
+            let author = document.querySelector('.msg-from');
 
-            if(i >= totalLength) {
+            if(i >= contentJson.length) {
                 button.disabled = true;
                 button.textContent = 'THE END!';
             }
             else {
                 popupImage.src = contentJson[i].image;
                 contentText.innerText = contentJson[i].text;
+                author.textContent = `Message From - ${contentJson[i].author}`;
             }
 
             i = i + 1;
         }
+
     </script>
 
   </body>
