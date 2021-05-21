@@ -13,6 +13,9 @@ html {
 body {
   font-family: "Lato", sans-serif;
   box-sizing: border-box;
+  background-image: url("./resources/img/Nakul-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header {
@@ -51,7 +54,7 @@ body {
 .header-box__primary {
   display: block;
   font-size: 3rem;
-  letter-spacing: 1.7rem;
+  letter-spacing: 1.2rem;
   animation-name: moveInLeft;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
@@ -70,15 +73,15 @@ body {
 .btn:link,
 .btn:visited {
   display: inline-block;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   font-weight: 300;
   margin-top: 3rem;
   text-decoration: none;
   border-radius: 4rem;
   background-color: #e67e22;
   color: #fff;
-  font-size: 1.2rem;
-  width: 50%;
+  font-size: 1rem;
+  width: 30%;
   letter-spacing: 0.5rem;
 }
 
@@ -165,6 +168,7 @@ body {
   padding: 1rem 3rem;
   border-radius: 3px;
   cursor: pointer;
+  color: white;
 }
 
 .popup__close,
